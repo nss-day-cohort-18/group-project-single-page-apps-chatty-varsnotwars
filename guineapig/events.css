@@ -1,0 +1,30 @@
+.blue {
+	color: blue;
+}
+
+.large {
+	font-size: 2em;
+}
+
+.bordered {
+	border: 2px solid purple;
+}
+
+.rounded {
+	border: 2px solid purple;
+	border-radius: 10px;	
+}
+
+#intro {
+	font-weight: bolder;
+}
+
+#conclusion {
+	font-weight: bolder;
+	font-style: italic;
+}
+
+button {
+	display: block;
+	margin: 1em;
+}
