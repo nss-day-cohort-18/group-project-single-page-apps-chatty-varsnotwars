@@ -1,4 +1,6 @@
-README.md
+# LambdaExpressionCalculator
+Instructions
+
 Create an HTML file that has two input fields to accept the two numbers to perform operations on.
 Create 4 buttons to perform each of the basic mathematical functions (add, subtract, multiply, divide).
 In your JavaScript, put an event listener on each of the buttons.

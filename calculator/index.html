@@ -1,32 +1,43 @@
+<!-- Create an HTML file that has two input fields to accept the two numbers to perform operations on.
+Create 4 buttons to perform each of the basic mathematical functions (add, subtract, multiply, divide). -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head> 
-    <meta charset="UTF-8">
-    <title>Calculator</title>
-</head>
-<body>
-    <h1>This is a calculator</h1>
-    <div>
-    <label>Input Number:</label>
-    <input type="text" id="inputOne">
-    </div>
-    <br>
-    <div>
 
-    <label>Input Number:</label>
-    <input type="text" id="inputTwo">
+<head>
+    <meta charset="UTF-8">
+    <title>Lambda Calculator</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+
+    <h1>Lambda Expression Calculator</h1>
+
+    <div id="inputArea">
+        <p>Input a Number:<br>
+        <input id="input1" type="text" name="numInput" size="10" maxlength="15">
+        </p>
+        <p>Input Another Number:<br>
+        <input id="input2" type="text" name="numInput" size="10" maxlength="15">
+        </p>
     </div>
-    <br>
+    <p>Choose a Calculation:</p>
     <div id="calcButtons">
-       <label><input id="add" type="button" name="calcButtons" value="Add" checked="checked"></label>
-       <label><input id="subtract" type="button" name="calcButtons" value="Subtract"></label>
-       <label><input id="multiply" type="button" name="calcButtons" value="Multiply"></label>
-       <label><input id="divide" type="button" name="calcButtons" value="Divide"></label> 
-       <br> 
+        <button id="addButton">Add</button>
+        <button id="subtractButton">Subtract</button>
+        <button id="multiplyButton">Multiply</button>
+        <button id="divideButton">Divide</button>
+        <br><br>    
+        <button id="calculateButton">CALCULATE NOW</button>
     </div>
     <hr>
-        <small>Output area</small>
-        <div id="output-target"></div>
+    <div id="outputArea">
+        <h4>Your Calculation:</h4>
+        <p>output placeholder</p>
+    </div>
+
+    
 
     <script type="text/javascript" src="calculator.js"></script>
 </body>
