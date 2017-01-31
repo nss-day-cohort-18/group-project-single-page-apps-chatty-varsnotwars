@@ -1,14 +1,17 @@
-   
 var inputOne = document.getElementById("inputOne");//variables for the inputs where the numbers go.
 var inputTwo = document.getElementById("inputTwo");
 var output = document.getElementById("output-target"); 
+var reButton = document.getElementById("reset");
 
 multiply.addEventListener("click", multiplyStuff);//placed the event listeners in variables so I can use them 
 divide.addEventListener("click", divideStuff);// in a function. That might be a crappy idea but whatever.
 subtract.addEventListener("click", subtractStuff);
 add.addEventListener("click", addStuff);
+reButton.addEventListener("click", reset);
 
-
+function reset() {
+window.location.reload(true);	
+};
 
 function addStuff() {
 	var a = Number(inputOne.value);
@@ -38,8 +41,3 @@ function divideStuff() {
 	var divSum = (g / h);
 	output.innerHTML = divSum;
 };
-
-function guy() {
-	
-}
-	
