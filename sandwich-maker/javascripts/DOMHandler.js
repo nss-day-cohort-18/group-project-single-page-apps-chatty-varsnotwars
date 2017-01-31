@@ -10,87 +10,69 @@ var endPrice = document.getElementById("output-area");
 var chosenToppings;
 var priceButton = document.getElementById("price")
 
-priceButton.addEventListener("click", function(event){
-	console.log("do i work");
-	end = sandwichMaker.endPrice;
-	console.log("sandwichMaker.finalPrice", sandwichMaker.finalPrice);
-	endPrice.innerHTML += end;	
-})
-
 veggie.addEventListener("change", function(event) {
-	if (event.target.checked === true) {
 		chosenToppings = event.target.id;
+	if (event.target.checked === true) {
 		chosenToppingPrice = sandwichMaker.getVegCost(chosenToppings);
-		var updatedPrice = sandwichMaker.addTopping(chosenToppingPrice);
-		endPrice.innerHTML = updatedPrice;
+		 sandwichMaker.addTopping(chosenToppingPrice);
+	} else if (event.target.checked === false) {
+		chosenToppingPrice = sandwichMaker.getVegCost(chosenToppings);
+		 sandwichMaker.subtractTopping(chosenToppingPrice);
+
 	}
+		endPrice.innerHTML = sandwichMaker.finalPrice();
 		
 });
 
 bread.addEventListener("change", function(event) {
-	if (event.target.checked === true) {
 		chosenToppings = event.target.id;
+	if (event.target.checked === true) {
 		chosenToppingPrice = sandwichMaker.getBreadCost(chosenToppings);
-		var updatedPrice = sandwichMaker.addTopping(chosenToppingPrice);
-		endPrice.innerHTML = updatedPrice;
+		sandwichMaker.addTopping(chosenToppingPrice);
+	} else if (event.target.checked === false) {
+		chosenToppingPrice = sandwichMaker.getBreadCost(chosenToppings);
+		 sandwichMaker.subtractTopping(chosenToppingPrice);
 
 	}
+		endPrice.innerHTML = sandwichMaker.finalPrice();
 });
 
 meat.addEventListener("change", function(event) {
-	if (event.target.checked === true) {
 		chosenToppings = event.target.id;
+	if (event.target.checked === true) {
 		chosenToppingPrice = sandwichMaker.getMeatCost(chosenToppings);
-		var updatedPrice = sandwichMaker.addTopping(chosenToppingPrice);
-		endPrice.innerHTML = updatedPrice;
+		sandwichMaker.addTopping(chosenToppingPrice);
+	} else if (event.target.checked === false) {
+		chosenToppingPrice = sandwichMaker.getMeatCost(chosenToppings);
+		 sandwichMaker.subtractTopping(chosenToppingPrice);
 
 	}
+		endPrice.innerHTML = sandwichMaker.finalPrice();
 });
 
 cheese.addEventListener("change", function(event) {
-	if (event.target.checked === true) {
 		chosenToppings = event.target.id;
+	if (event.target.checked === true) {
 		chosenToppingPrice = sandwichMaker.getCheeseCost(chosenToppings);
-		var updatedPrice = sandwichMaker.addTopping(chosenToppingPrice);
-		endPrice.innerHTML = updatedPrice;
+		sandwichMaker.addTopping(chosenToppingPrice);
+	} else if (event.target.checked === false) {
+		chosenToppingPrice = sandwichMaker.getCheeseCost(chosenToppings);
+		 sandwichMaker.subtractTopping(chosenToppingPrice);
 
 	}
+		endPrice.innerHTML = sandwichMaker.finalPrice();
 });
 
 condiment.addEventListener("change", function(event) {
-	if (event.target.checked === true) {
 		chosenToppings = event.target.id;
+	if (event.target.checked === true) {
 		chosenToppingPrice = sandwichMaker.getConCost(chosenToppings);
-		var updatedPrice = sandwichMaker.addTopping(chosenToppingPrice);
-		endPrice.innerHTML = updatedPrice;
+		sandwichMaker.addTopping(chosenToppingPrice);
+	} else if (event.target.checked === false) {
+		chosenToppingPrice = sandwichMaker.getConCost(chosenToppings);
+		 sandwichMaker.subtractTopping(chosenToppingPrice);
 
 	}
+		endPrice.innerHTML = sandwichMaker.finalPrice();
 });
-
-// price.addEventListener("click", event) {
-// 		var theFinalCost = sandwichMaker.price();
-// 		console.log("yoyo what up")
-// }
-
-// Variable to hold the final price. Default to 0.
-// var finalSandwichPrice = 0;
-
-// // Variable to hold topping that the user selects
-// var selectedTopping;
-
-// // Get a reference to the <select> element that has all the meat options
-// var meatChooser = document.getElementById("meats");
-
- 
-//   A <select> element broadcasts a change event, so you listen for it
-//   and get the value of the topping from your augmented IIFE
-
-// meatChooser.addEventListener("change", function(event) {
-//   // Get the value chosen from the DOM
-//   selectedTopping = event.target.value;
-// console.log("selectedTopping", selectedTopping)
-//   // Determine the price of the topping chosen
-
-//   // Add the topping to the SandwichMaker to increase the total price
-// });
 
